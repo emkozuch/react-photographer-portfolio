@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    color: white;
+    width: 80vw;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+    .children-container{
+        width: 80%;
+        // background-color: rgba(36, 35, 35, 0.144);
+    }
+}

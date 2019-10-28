@@ -1,0 +1,25 @@
+.menu-container {
+  height: 100%;
+  width: 20%;
+  // border: 1px solid white;
+  color: white;
+  .logo-container{
+    height: 10%;
+    border: 1px solid white;
+  }
+  .nav-wrapper {
+      height: 80%;
+      border: 1px solid white;
+    .menu-links-group {
+        height: 100%;
+        list-style: none;
+      .menu-link {
+          height: 20%;
+      }
+    }
+  }
+  .media-container{
+    height: 10%;
+    border: 1px solid white;
+  }
+}
