@@ -2,7 +2,7 @@
   "homepage": "https://emkozuch.github.io/react-photographer-portfolio/",
   "name": "photographer-portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
@@ -44,8 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
-  }
+  "devDependencies": {}
 }
