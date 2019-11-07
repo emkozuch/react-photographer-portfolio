@@ -1,16 +1,22 @@
 import React from 'react'
-import Wrapper from '../Components/Wrapper'
 import '../Styles/Pages/ContactPage-style.scss'
 
-const AboutPage = () => {
+import ContactForm from '../Components/ContactForm'
+
+const ContactPage = () => {
     return (
-        
-            <div>
-                <h1>dupa</h1>
+        <div className="contact content-container">
+            <div className="quote-container">
+                <div className="quote">
+                    <p><span className="colored">“</span>A portrait is not made in the camera but on either side of it.<span className="colored">“</span></p>
+                    <span><span className="colored">—</span> Edward Steichen</span>
+                </div>
             </div>
-        // </Wrapper>
+            <ContactForm />
+
+        </div>
 
 
     )
 }
-export default AboutPage
+export default ContactPage

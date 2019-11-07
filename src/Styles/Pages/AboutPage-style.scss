@@ -1,0 +1,29 @@
+.content-container {
+  overflow: auto;
+  &.about {
+    display: flex;
+    justify-content: space-between;
+    .about-content {
+      width: 48%;
+      margin-left: 20px;
+      h2 {
+      }
+      p {
+        margin-left: 10px;
+        text-align: justify;
+      }
+    }
+    .photos-container {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      height: fit-content;
+      margin-top: 20px;
+      img {
+        width: 70%;
+        max-height: 50vh;
+        margin: 10px;
+      }
+    }
+  }
+}

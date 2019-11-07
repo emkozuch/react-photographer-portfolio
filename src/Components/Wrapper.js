@@ -5,11 +5,12 @@ import Menu from './Menu'
 const Wrapper = (props) => {
     return (
         <div className="wrapper">
-            <Menu />
+            <div className="menu-container">
+                <Menu />
+            </div>
             <div className="children-container">
                 {props.children}
             </div>
-
         </div>
     )
 }

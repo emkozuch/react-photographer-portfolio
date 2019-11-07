@@ -1,0 +1,40 @@
+@keyframes contrast {
+  from {
+    filter: contrast(1);
+  }
+  to {
+    filter: contrast(1.5);
+  }
+}
+.album-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 50%;
+  margin: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover {
+    animation: contrast 500ms forwards;
+  }
+
+  .album-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+
+    .album-title-container {
+      font-size: 2vw;
+      text-align: center;
+      animation: fadeIn 1s;
+      background-color: rgba(0, 0, 0, 0.527);
+      min-width: 50%;
+    }
+  }
+}
