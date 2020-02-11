@@ -10,7 +10,7 @@ import SVG from 'react-inlinesvg'
 
 const Menu = () => {
     return (
-        <div className="container">
+        <>
             <div className="logo-container">
                 <SVG className="brand-logo" src={photoLogo}/>
             </div>
@@ -27,7 +27,7 @@ const Menu = () => {
                 <a href="#"><FontAwesomeIcon icon={faLinkedin} className="font-awesome-icon" ></FontAwesomeIcon></a>
                 <a href="#"><FontAwesomeIcon icon={faFacebook} className="font-awesome-icon" ></FontAwesomeIcon></a>
             </div>
-        </div>
+        </>
     )
 }
 export default Menu
