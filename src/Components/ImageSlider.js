@@ -24,13 +24,13 @@ class ImageSlider extends React.Component {
     render() {
         
         
-        let slideStyle = ""
+        let animatedClass = ""
         if (this.state.mouseOver === true) {
-            slideStyle = "fade-in"
+            animatedClass = "fade-in"
         }
         return (
             <div className="image-slider-main-container">
-                <Slide style={slideStyle} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onTouchMove={this.props.onTouchMove} closeModal={this.props.closeModal} src={this.props.src} prevSlide={this.props.prevSlide} nextSlide={this.props.nextSlide} />
+                <Slide animatedClass={animatedClass}  onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onTouchMove={this.props.onTouchMove} closeModal={this.props.closeModal} src={this.props.src} prevSlide={this.props.prevSlide} nextSlide={this.props.nextSlide} />
             </div>
         )
     }

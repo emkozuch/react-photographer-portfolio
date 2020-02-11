@@ -12,7 +12,7 @@ const Slide = (props) => {
                 className="slide-content">
                 <button
                     onClick={props.closeModal}
-                    className={`close-modal-btn ${props.style}`}>
+                    className={`close-modal-btn ${props.animatedClass}`}>
                     <FontAwesomeIcon
                         icon={faTimes}
                         size="2x" />
@@ -22,7 +22,7 @@ const Slide = (props) => {
                     src={props.src}
                     alt={props.alt} />
                 <div
-                    className={`arrow-btns-container ${props.style}`}>
+                    className={`arrow-btns-container ${props.animatedClass}`}>
                     <button
                         onKeyDown={props.onKeyDown}
                         onClick={props.prevSlide}>

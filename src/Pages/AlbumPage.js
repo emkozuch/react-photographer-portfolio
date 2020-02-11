@@ -7,7 +7,6 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import ClickablePhoto from '../Components/ClickablePhoto'
 import ImageSlider from '../Components/ImageSlider'
 import Swipe from 'react-easy-swipe';
-import {useParams} from 'react-router'
 class AlbumPage extends React.Component {
     state = {
         currentPath: this.props.match.params.id,
@@ -59,10 +58,11 @@ class AlbumPage extends React.Component {
         let photosArr = []
         albums.map((album) => {
             if (album.route === this.state.currentPath) {
-                album.data.map((photo) => {
+                album.data.forEach((photo) => {
                     photosArr.push([photo.id, photo.src])
                 })
             }
+            return null
         })
         this.setState({
             photosArr: photosArr,
@@ -72,7 +72,6 @@ class AlbumPage extends React.Component {
     componentDidMount() {
         this.getPhotos()
         window.addEventListener('keydown', this.handleKeyDown)
-        console.log(this.state.currentPath)
     }
 
     onSwipeMove = (position) => {

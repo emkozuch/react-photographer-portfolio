@@ -1,17 +1,16 @@
 import React from 'react';
 import './Styles/Components/App.scss';
 import Wrapper from './Components/Wrapper'
-import Menu from './Components/Menu'
 
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import PortfolioPage from './Pages/PortfolioPage'
 import ContactPage from './Pages/ContactPage'
 import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import AlbumPage from './Pages/AlbumPage'
-import { TransitionGroup, Transition, CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 const routes = [
   { path: '/', name: 'Home', Component: HomePage },

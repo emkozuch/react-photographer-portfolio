@@ -24,7 +24,7 @@ const AboutPage = () => {
             </div>
             <div className="photos-container">
                 {aboutPhotos.map((photo, index) => {
-                    return <img key={`about-${index}`} src={photo}/>
+                    return <img key={`about-${index}`} src={photo} alt={`about-${index}`}/>
 })}
             </div>
         </div>
