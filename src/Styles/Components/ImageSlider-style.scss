@@ -1,57 +1,47 @@
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 .image-slider-main-container {
   display: flex;
-  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.616);
   justify-content: center;
   align-items: center;
 
   .slide {
-    display: flex;
-    justify-content: center;
     width: 90%;
     height: 90%;
     .slide-content {
       position: relative;
-      width: fit-content;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      .close-modal-btn,
-      .arrow-btns-container {
-        position: absolute;
-        opacity: 0;
-        &.fade-in{
-         transition: opacity 1s;
-         opacity: 1
-        }
-      }
-      .close-modal-btn,
-      button {
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.657);
+      button{
+        background-color: rgba(0, 0, 0, 0.739);
         color: white;
         border: none;
       }
-      .close-modal-btn{
-          width: 10%;
-          height: 10%;
+      .close-modal-btn,
+      .arrow-btns-container {
+        position: absolute;
+        opacity: 1;
       }
+      .close-modal-btn {
+        top: 15%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        width: 100%;
+        height: 10%;
+      }
+
       .arrow-btns-container {
         bottom: 0;
         border: 0px;
-        width: 20%;
+        width: 100%;
         height: 7%;
         display: flex;
         justify-content: center;
@@ -62,9 +52,36 @@
         }
       }
       img {
-        max-height: 100%;
         max-width: 100%;
+        max-height: 100%;
       }
     }
   }
+}
+@media (min-width: 576px){
+  .image-slider-main-container {
+    .slide {
+      .slide-content {
+        .close-modal-btn,
+        .arrow-btns-container {
+          position: absolute;
+          opacity: 0;
+          &.fade-in {
+            transition: opacity 1s;
+            opacity: 1;
+          }
+        }
+        .close-modal-btn {
+          background: rgb(78, 22, 13);
+          top: 0;
+          width: 10%;
+          height: 10%;
+        }
+        .arrow-btns-container {
+          width: 20% ;
+        }
+      }
+    }
+  }
+  
 }
