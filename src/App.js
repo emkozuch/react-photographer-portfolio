@@ -4,33 +4,45 @@ import Wrapper from './Components/Wrapper'
 import Menu from './Components/Menu'
 
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import PortfolioPage from './Pages/PortfolioPage'
 import ContactPage from './Pages/ContactPage'
 import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import AlbumPage from './Pages/AlbumPage'
+import { TransitionGroup, Transition, CSSTransition } from 'react-transition-group';
 
-function App() {
-
+const routes = [
+  { path: '/', name: 'Home', Component: HomePage },
+  { path: '/about', name: 'About', Component: AboutPage },
+  { path: '/portfolio', name: 'Portfolio', Component: PortfolioPage },
+  { path: '/portfolio/:id', name: 'AlbumPage', Component: AlbumPage },
+  { path: '/contact', name: 'Contact', Component: ContactPage },
+]
+const App = () => {
   return (
     <BrowserRouter>
-
       <div className="App">
         <Wrapper>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route exact path="/portfolio" component={PortfolioPage}/>
-          <Route path="/portfolio/:id" component={AlbumPage}/>
-          <Route path="/contact" component={ContactPage} />
+            {routes.map(({ path, Component }) => (
+              <Route key={path} exact path={path}>
+                {({ match }) => (
+                  <CSSTransition
+                    in={match != null}
+                    timeout={600}
+                    classNames="page"
+                    unmountOnExit
+                  >
+                    <Component match={match} />
+                  </CSSTransition>
+                )}
+              </Route>
+            ))}
         </Wrapper>
       </div>
-
-    </BrowserRouter>
+    </BrowserRouter >
 
   );
 }
-
-
-export default App;
+export default App

@@ -13,9 +13,6 @@
       height: 100%;
 
       &:hover {
-        .logo.hoverable {
-          // fill: #27184f38 !important;
-        }
         #g5324 path {
           fill: #f56468 !important;
         }
@@ -34,13 +31,10 @@
       }
       .menu-link {
         height: 20%;
-        // margin-bottom: 20px;
         border-bottom: 1px solid transparent;
         font-size: 1.2vw;
         &:hover {
-          // border-bottom-color: white;
           background-color: rgba(182, 182, 182, 0.253);
-          // background-color: green;
         }
         a {
           height: 100%;
@@ -48,7 +42,6 @@
           display: flex;
           align-items: flex-end;
           padding-left: 20px;
-          // margin-bottom: 30px;
         }
       }
     }
@@ -62,6 +55,10 @@
   a {
     color: white;
     text-decoration: none;
+    .font-awesome-icon{
+      height: 4vh;
+      width: 5vw;
+    }
     &:hover {
       color: #f56468;
     }

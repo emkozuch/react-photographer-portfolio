@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles//Components/Wrapper-style.scss'
 import Menu from './Menu'
-
+import {TransitionGroup, CSSTransition} from 'react-transition-group'
 const Wrapper = (props) => {
     return (
         <div className="wrapper">

@@ -7,7 +7,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import ClickablePhoto from '../Components/ClickablePhoto'
 import ImageSlider from '../Components/ImageSlider'
 import Swipe from 'react-easy-swipe';
-
+import {useParams} from 'react-router'
 class AlbumPage extends React.Component {
     state = {
         currentPath: this.props.match.params.id,
@@ -16,7 +16,8 @@ class AlbumPage extends React.Component {
         photosArr: [],
         albumLength: 0,
         touchStart: 0,
-        touchEnd: 0
+        touchEnd: 0,
+
     }
 
     openModal = index => {
@@ -71,6 +72,7 @@ class AlbumPage extends React.Component {
     componentDidMount() {
         this.getPhotos()
         window.addEventListener('keydown', this.handleKeyDown)
+        console.log(this.state.currentPath)
     }
 
     onSwipeMove = (position) => {
@@ -98,22 +100,19 @@ class AlbumPage extends React.Component {
                     <div className="back-btn-container">
                         <button>
                             <Link to="/portfolio">
-                                <FontAwesomeIcon
-                                    icon={faChevronLeft}
-                                    size="2x" />
+                                <FontAwesomeIcon icon={faChevronLeft} size="2x" />
                             </Link>
                         </button>
                     </div>
                     <div className="album-photos-container">
-                        {
-                            this.state.photosArr.map((photo, index) => {
-                                return (
-                                    <ClickablePhoto
-                                        onClick={() => { this.openModal(index) }}
-                                        id={photo[0]}
-                                        src={photo[1]} />
-                                )
-                            })}
+                        {this.state.photosArr.map((photo, index) => {
+                            return (
+                                <ClickablePhoto key={`photo-${index}`}
+                                    onClick={() => { this.openModal(index) }}
+                                    id={photo[0]}
+                                    src={photo[1]} />
+                            )
+                        })}
                     </div>
                 </div>
             )
@@ -135,7 +134,7 @@ class AlbumPage extends React.Component {
                             this.state.photosArr.map((photo, index) => {
                                 return (
                                     <ClickablePhoto
-                                    key={photo[0]}
+                                        key={`photo-${index}`}
                                         onClick={() => { this.openModal(index) }}
                                         id={photo[0]}
                                         src={photo[1]} />

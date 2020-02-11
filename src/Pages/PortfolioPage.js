@@ -7,10 +7,10 @@ const PortfolioPage = () => {
 
     return (
         <div className="portfolio content-container">
-            {albums.map((album) => {
+            {albums.map((album,index) => {
                 let source = album.data[0].src
-                console.log(source)
-                return <AlbumCover style={{backgroundImage: "url("+source+")"}} to={`/portfolio/${album.id}`} title={album.title} date={album.date} />
+
+                return <AlbumCover key={`album-${index}`} style={{backgroundImage: "url("+source+")"}} to={`/portfolio/${album.route}`} title={album.title} date={album.date} />
             })}
         </div>
     )

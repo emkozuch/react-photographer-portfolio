@@ -23,9 +23,9 @@ const Menu = () => {
                 </ul>
             </nav>
             <div className="media-container">
-                <a href="#"><FontAwesomeIcon icon={faInstagram} size="2x"></FontAwesomeIcon></a>
-                <a href="#"><FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon></a>
-                <a href="#"><FontAwesomeIcon icon={faFacebook} size="2x"></FontAwesomeIcon></a>
+                <a href="#"><FontAwesomeIcon icon={faInstagram} className="font-awesome-icon" ></FontAwesomeIcon></a>
+                <a href="#"><FontAwesomeIcon icon={faLinkedin} className="font-awesome-icon" ></FontAwesomeIcon></a>
+                <a href="#"><FontAwesomeIcon icon={faFacebook} className="font-awesome-icon" ></FontAwesomeIcon></a>
             </div>
         </div>
     )
