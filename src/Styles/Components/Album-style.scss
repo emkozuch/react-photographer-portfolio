@@ -1,25 +1,13 @@
-@keyframes contrast {
-  from {
-    filter: contrast(1);
-  }
-  to {
-    filter: contrast(1.5);
-  }
-}
+
 .album-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48%;
-  height: 50%;
+  width: 90%;
+  height: 30%;
   margin: 5px;
   background-size: cover;
   background-repeat: no-repeat;
-  cursor: pointer;
-  &:hover {
-    animation: contrast 500ms forwards;
-  }
-
   .album-link {
     display: flex;
     width: 100%;
@@ -30,11 +18,37 @@
     color: white;
 
     .album-title-container {
-      font-size: 2vw;
+      font-size: 5vw;
       text-align: center;
-      animation: fadeIn 1s;
-      background-color: rgba(0, 0, 0, 0.527);
+      background-color: rgba(0, 0, 0, 0.753);
       min-width: 50%;
     }
   }
+}
+@media (min-width:576px){
+  @keyframes contrast {
+    from {
+      filter: contrast(1);
+    }
+    to {
+      filter: contrast(1.5);
+    }
+  }
+  .album-card {
+    align-items: center;
+    width: 48%;
+    height: 50%;
+    cursor: pointer;
+    &:hover {
+      animation: contrast 500ms forwards;
+    }
+  
+    .album-link {
+      .album-title-container {
+        font-size: 2vw;
+        background-color: rgba(0, 0, 0, 0.753);
+      }
+    }
+  }
+  
 }
