@@ -22,7 +22,6 @@ const AboutPage = () => {
                     <img className="about-photo" src={aboutPhotos[2]} alt="about-1" />
                     <h2>Paragraph Title</h2>
                     <p>Mollit nisi incididunt officia qui irure id duis nisi veniam velit sit nulla. Ex esse quis veniam aliqua ex dolore amet. Cupidatat esse do dolore amet ad ipsum ut aliqua.Eiusmod laboris laboris pariatur nostrud. Cupidatat sunt eu labore officia dolore. Id enim esse proident laboris duis occaecat. Ea non ex laborum ad ipsum excepteur.Eiusmod ut aliqua nisi voluptate tempor id. Veniam sint tempor est magna cupidatat velit laboris enim exercitation irure ipsum veniam excepteur. Magna quis ad excepteur labore ad ut anim deserunt nulla deserunt.</p>
-                    <h2>Paragraph Title</h2>
                 </div>
 
             </div>
